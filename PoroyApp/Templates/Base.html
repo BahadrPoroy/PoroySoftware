@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>POROY SOFTWARE</title>
+</head>
+<body style="background-image: url('https://i.pcmag.com/imagery/roundups/02HDufdqeRUDu3tl0NnY2qZ-2..v1649351854.jpg');
+    background-attachment: fixed;
+    background-size: 100% 100%;">
+<div>
+    <h1 id='S_Baslik' align="center" style="color: #FFFFFF; font-size:40px">
+        POROY SOFTWARE
+    </h1>
+    <nav class="navbar" style="padding: 10px; text-align: center; font-size: 25px">
+        <a href="/Anasayfa" style="color: white">Anasayfa</a>
+        <a href="/Hakkimizda" style="color: white">Hakkımızda</a>
+        <a href="/Iletisim" style="color: white">İletişim</a>
+    </nav>
+</div>
+<div align="right">
+    {% if user.is_authenticated %}
+    <p style="color: #FFFFFF">
+        {{user.username}}
+        <button onclick="window.location.href='http://127.0.0.1:8000/Cikis'">Çıkış Yap</button>
+        <button onclick="window.location.href='http://127.0.0.1:8000/Yonetim'">Yonetim</button>
+    </p>
+    {% endif %}
+</div>
+{% block content %}{% endblock %}
+</body>
+</html>
+
+
